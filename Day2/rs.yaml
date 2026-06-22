@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: rs-kiran
+  namespace: kiran
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: my-container1
+        image: nginx
+      - name: c2
+        image: busybox
+        command: ["sleep", "3600"]

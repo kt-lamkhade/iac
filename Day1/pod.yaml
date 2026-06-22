@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+  namespace: kiran
+spec:
+  containers:
+    - name: my-container1
+      image: nginx:latest
+    - name: my-container2
+      image: busybox:latest
